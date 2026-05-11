@@ -1,0 +1,225 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>HBD ANNU 🎂</title>
+    <style>
+        :root {
+            --primary-glow: #ff00cc;
+            --secondary-glow: #3333ff;
+            --accent: #00fff2;
+        }
+
+        body, html {
+            margin: 0;
+            padding: 0;
+            width: 100%;
+            height: 100%;
+            overflow: hidden;
+            background: #050505;
+            font-family: 'Segoe UI', Roboto, sans-serif;
+        }
+
+        /* 3D Animated Background */
+        #bg-canvas {
+            position: fixed;
+            top: 0;
+            left: 0;
+            width: 100%;
+            height: 100%;
+            z-index: -1;
+            background: radial-gradient(circle at center, #1b2735 0%, #090a0f 100%);
+        }
+
+        .slider {
+            display: flex;
+            width: 500vw;
+            height: 100vh;
+            transition: transform 1s cubic-bezier(0.85, 0, 0.15, 1);
+        }
+
+        section {
+            width: 100vw;
+            height: 100vh;
+            display: flex;
+            justify-content: center;
+            align-items: center;
+        }
+
+        /* Advanced Glassmorphism Card */
+        .glass-card {
+            background: rgba(255, 255, 255, 0.05);
+            backdrop-filter: blur(20px);
+            border: 1px solid rgba(255, 255, 255, 0.1);
+            border-radius: 30px;
+            padding: 40px;
+            text-align: center;
+            width: 90%;
+            max-width: 500px;
+            box-shadow: 0 8px 32px 0 rgba(0, 0, 0, 0.8);
+            transform-style: preserve-3d;
+            position: relative;
+        }
+
+        h1 {
+            font-size: 2.5rem;
+            background: linear-gradient(to right, var(--primary-glow), var(--accent));
+            -webkit-background-clip: text;
+            -webkit-text-fill-color: transparent;
+            margin-bottom: 10px;
+            text-transform: uppercase;
+            letter-spacing: 2px;
+        }
+
+        .date-badge {
+            color: var(--accent);
+            font-weight: bold;
+            letter-spacing: 5px;
+            margin-bottom: 20px;
+            display: block;
+        }
+
+        .gif-frame {
+            border-radius: 15px;
+            overflow: hidden;
+            border: 2px solid rgba(255, 255, 255, 0.1);
+            margin: 20px 0;
+            background: rgba(0,0,0,0.3);
+            min-height: 250px;
+        }
+
+        /* Glowing Button */
+        .glow-btn {
+            background: transparent;
+            border: 2px solid var(--primary-glow);
+            color: white;
+            padding: 15px 40px;
+            border-radius: 50px;
+            font-size: 1.1rem;
+            font-weight: bold;
+            text-transform: uppercase;
+            cursor: pointer;
+            transition: all 0.3s ease;
+            position: relative;
+            overflow: hidden;
+            box-shadow: 0 0 15px var(--primary-glow);
+            margin-top: 20px;
+        }
+
+        .glow-btn:hover {
+            background: var(--primary-glow);
+            box-shadow: 0 0 40px var(--primary-glow), 0 0 60px var(--secondary-glow);
+            transform: translateY(-3px);
+        }
+
+        /* Floating Particles Simulation */
+        .particle {
+            position: absolute;
+            background: white;
+            border-radius: 50%;
+            pointer-events: none;
+            opacity: 0.5;
+            animation: float 10s infinite linear;
+        }
+
+        @keyframes float {
+            0% { transform: translateY(100vh) translateX(0); }
+            100% { transform: translateY(-10vh) translateX(50px); }
+        }
+    </style>
+</head>
+<body>
+
+    <div id="bg-canvas"></div>
+
+    <div class="slider" id="mainSlider">
+        
+        <!-- PAGE 1: HERO -->
+        <section>
+            <div class="glass-card">
+                <span class="date-badge">MAY 12</span>
+                <h1>HAPPY BIRTHDAY -ANNU!</h1>
+                <p style="color: #ccc;">Today is special Day</p>
+                <button class="glow-btn" onclick="go(1)">OPEN THE WISH 🎁</button>
+            </div>
+        </section>
+
+        <!-- PAGE 2: PUDGY -->
+        <section>
+            <div class="glass-card">
+                <div class="gif-frame">
+                    <div class="tenor-gif-embed" data-postid="4570047347139232072" data-share-method="host" data-aspect-ratio="1" data-width="100%"></div>
+                </div>
+                <button class="glow-btn" onclick="go(2)">NEXT SURPRISE ➡</button>
+            </div>
+        </section>
+
+        <!-- PAGE 3: SEALS -->
+        <section>
+            <div class="glass-card">
+                <div class="gif-frame">
+                    <div class="tenor-gif-embed" data-postid="9819473273390906766" data-share-method="host" data-aspect-ratio="1" data-width="100%"></div>
+                </div>
+                <button class="glow-btn" onclick="go(3)">KEEP GOING </button>
+            </div>
+        </section>
+
+        <!-- PAGE 4: BUBU -->
+        <section>
+            <div class="glass-card">
+                <div class="gif-frame">
+                    <div class="tenor-gif-embed" data-postid="12219406227978918338" data-share-method="host" data-aspect-ratio="1.0641" data-width="100%"></div>
+                </div>
+                <button class="glow-btn" onclick="go(4)">FINAL REVEAL 🎂</button>
+            </div>
+        </section>
+
+        <!-- PAGE 5: FINAL -->
+        <section>
+            <div class="glass-card">
+                <div class="gif-frame">
+                    <div class="tenor-gif-embed" data-postid="12456739053466305018" data-share-method="host" data-aspect-ratio="1" data-width="100%"></div>
+                </div>
+                <h1>CELEBRATE! 🎉</h1>
+                <button class="glow-btn" onclick="go(0)">RESTART </button>
+            </div>
+        </section>
+
+    </div>
+
+    <script type="text/javascript" async src="https://tenor.com/embed.js"></script>
+
+    <script>
+        // Create Animated Background Particles
+        const bg = document.getElementById('bg-canvas');
+        for (let i = 0; i < 100; i++) {
+            const p = document.createElement('div');
+            p.className = 'particle';
+            p.style.left = Math.random() * 100 + 'vw';
+            p.style.width = p.style.height = Math.random() * 3 + 'px';
+            p.style.animationDuration = (Math.random() * 10 + 5) + 's';
+            p.style.animationDelay = Math.random() * 5 + 's';
+            bg.appendChild(p);
+        }
+
+        // Slider Logic
+        function go(index) {
+            document.getElementById('mainSlider').style.transform = `translateX(-${index * 100}vw)`;
+        }
+
+        // Card 3D Tilt Effect
+        document.querySelectorAll('.glass-card').forEach(card => {
+            card.addEventListener('mousemove', (e) => {
+                const rect = card.getBoundingClientRect();
+                const x = (e.clientX - rect.left) / rect.width - 0.5;
+                const y = (e.clientY - rect.top) / rect.height - 0.5;
+                card.style.transform = `perspective(1000px) rotateY(${x * 30}deg) rotateX(${y * -30}deg)`;
+            });
+            card.addEventListener('mouseleave', () => {
+                card.style.transform = `perspective(1000px) rotateY(0deg) rotateX(0deg)`;
+            });
+        });
+    </script>
+</body>
+</html>
